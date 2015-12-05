@@ -1,0 +1,35 @@
+Creating a release
+==================
+
+:synopsis: Creating a wait-for-port release
+
+How to make a new release
+-------------------------
+
+Run tests::
+
+  $ tox
+
+Update version number::
+
+  $ vi wait_for_port/__init__.py
+  $ git commit -m v1.0.0 wait_for_port/__init__.py
+
+Tag::
+
+  $ git tag 1.0.0
+
+Prepare the release::
+
+  $ python setup.py sdist bdist_wheel upload -s
+
+Bump version number:
+
+  $ vi wait_for_port/__init__.py
+  $ git commit -m 'bumped version number' wait_for_port/__init__.py
+
+Push changes to github::
+
+  $ git push --tags
+  $ git push
+
