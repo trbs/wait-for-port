@@ -1,9 +1,10 @@
 from setuptools import setup
+import wait_for_port
 
 
 setup(
     name='wait_for_port',
-    version='1.0',
+    version=wait_for_port.__version__,
     url='http://github.com/trbs/wait_for_port',
     author='trbs',
     author_email='trbs@trbs.net',
