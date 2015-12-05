@@ -25,7 +25,7 @@ setup(
     packages=['wait_for_port'],
     entry_points={
         'console_scripts': [
-            'wait_for_port = wait_for_port.main:main',
+            'wait-for-port = wait_for_port.main:main',
         ]
     },
 )
