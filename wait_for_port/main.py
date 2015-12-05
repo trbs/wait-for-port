@@ -2,6 +2,7 @@ import sys
 import argparse
 from . import wait_for_port
 
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('host', help="dns name or ip adress")
