@@ -2,7 +2,7 @@ import time
 import socket
 
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 
 def wait_for_port(host='localhost', port=80, timeout=None, retries=None, fail_on_error=False, sleep=None, verbose=False):
