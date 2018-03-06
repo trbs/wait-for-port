@@ -15,7 +15,7 @@ def test_unbound_local_error():
     import wait_for_port
 
     wait_for_port.wait_for_port(
-        host='%$@#', # host is incorrect and will cause an exception
+        host='%$@#',  # host is incorrect and will cause an exception
         port=1,
         verbose=True
     )
