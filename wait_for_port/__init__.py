@@ -27,11 +27,13 @@ def wait_for_port(host='localhost', port=80, timeout=None, retries=None, fail_on
             if verbose:
                 print("Port '%s:%s' is open" % (host, port))
             return True
-        except socket.timeout as exc:
-            pass
-        except socket.error as exc:
+        except socket.timeout as e:
+            exc = e
+        except socket.error as e:
             if fail_on_error:
                 raise
+            else:
+                exc = e
     if verbose:
         if exc:
             exc = "(%s)" % exc
