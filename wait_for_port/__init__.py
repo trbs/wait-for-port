@@ -2,7 +2,7 @@ import time
 import socket
 
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 
 def wait_for_port(host='localhost', port=80, timeout=None, retries=None, fail_on_error=False, sleep=None, verbose=False):
@@ -32,8 +32,7 @@ def wait_for_port(host='localhost', port=80, timeout=None, retries=None, fail_on
         except socket.error as e:
             if fail_on_error:
                 raise
-            else:
-                exc = e
+            exc = e
     if verbose:
         if exc:
             exc = "(%s)" % exc
